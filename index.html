@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
+    <link rel="icon" href="./assets/favicon-DHrruNeO.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon-Cs7Wkco_.png" />
+    <title>The Melting Alps</title>
+    <meta name="description" content="How every large glacier in the European Alps has shrunk since about 1850, and how it is projected to shrink until 2100 under four climate scenarios." />
+    <!-- link previews on social media (Open Graph, X); the image is a render of the map itself -->
+    <link rel="canonical" href="https://themeltingalps.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Melting Alps" />
+    <meta property="og:title" content="The Melting Alps" />
+    <meta property="og:description" content="How every large glacier in the European Alps has shrunk since about 1850, and how it is projected to shrink until 2100 under four climate scenarios. An interactive 3D map." />
+    <meta property="og:url" content="https://themeltingalps.com/" />
+    <meta property="og:image" content="https://themeltingalps.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="3D map of the Aletsch Glacier region with the glacier ice in 2026 shown in orange, under the title The Melting Alps." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://tiles.mapterhorn.com" crossorigin />
+    <link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />
+    <script type="module" crossorigin src="./assets/main-CILrE6wG.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/maplibre-oUQDdSNN.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-DCTXgMYn.css">
+  </head>
+  <body>
+    <div id="map" aria-label="3D map of Alpine glaciers"></div>
+    <div id="map2" aria-label="3D map of Alpine glaciers, second scenario" hidden></div>
+    <div id="divider" class="divider" hidden>
+      <span class="side left" id="sideLeft"></span>
+      <button class="handle" type="button" role="separator" aria-orientation="vertical" aria-valuemin="8" aria-valuemax="92"
+        aria-valuenow="50" aria-label="Move the divider between the two scenarios">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3 1 8l5 5M10 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <span class="side right" id="sideRight"></span>
+    </div>
+
+    <header class="brand">
+      <h1>The Melting Alps</h1>
+      <p>250 largest glaciers · 1850–2100 · <a href="about.html">About the data</a> · <a href="about-me.html">About me</a> · <button id="theme" class="link" type="button"></button></p>
+      <div class="search" role="search">
+        <input id="search" type="search" placeholder="Search a glacier or RGI ID" autocomplete="off" spellcheck="false"
+          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="searchResults" aria-label="Search a glacier" />
+        <ul id="searchResults" role="listbox" aria-label="Glaciers" hidden></ul>
+      </div>
+    </header>
+
+    <aside id="panel" class="panel" aria-labelledby="panelTitle" hidden>
+      <header class="panel-head">
+        <div>
+          <h2 id="panelTitle" tabindex="-1"></h2>
+          <p id="panelSub"></p>
+        </div>
+        <button id="panelClose" class="btn close" type="button" aria-label="Close glacier information">✕</button>
+      </header>
+      <div id="panelBody" class="panel-body"></div>
+    </aside>
+
+    <section class="dock" aria-label="Time and scenario">
+      <div class="row time">
+        <button id="play" class="btn play" type="button" aria-label="Play through time">Play</button>
+        <div class="slider">
+          <input id="year" type="range" min="1850" max="2100" step="1" value="2026" aria-label="Year" />
+          <div class="ticks" aria-hidden="true">
+            <span>1850</span><span>1900</span><span>1950</span><span>2000</span><span>2050</span><span>2100</span>
+          </div>
+        </div>
+        <output id="yearOut" for="year" class="year">2026</output>
+      </div>
+      <div class="row options">
+        <div class="scenarios" id="scnLeft" role="radiogroup" aria-label="Global warming by 2100">
+          <span class="label"><span class="when-single">Warming by 2100</span><span class="when-compare">Left</span></span>
+          <button type="button" role="radio" data-lv="15"><span class="sw"></span>+1.5 °C</button>
+          <button type="button" role="radio" data-lv="20"><span class="sw"></span>+2.0 °C</button>
+          <button type="button" role="radio" data-lv="27"><span class="sw"></span>+2.7 °C</button>
+          <button type="button" role="radio" data-lv="40"><span class="sw"></span>+4.0 °C</button>
+        </div>
+        <div class="scenarios when-compare" id="scnRight" role="radiogroup" aria-label="Right map: global warming by 2100">
+          <span class="label">Right</span>
+          <button type="button" role="radio" data-lv="15"><span class="sw"></span>+1.5 °C</button>
+          <button type="button" role="radio" data-lv="20"><span class="sw"></span>+2.0 °C</button>
+          <button type="button" role="radio" data-lv="27"><span class="sw"></span>+2.7 °C</button>
+          <button type="button" role="radio" data-lv="40"><span class="sw"></span>+4.0 °C</button>
+        </div>
+        <button id="compare" class="btn compare" type="button" aria-pressed="false">Compare</button>
+        <ul class="legend" id="legend" aria-label="Outline provenance in view">
+          <li data-prov="measured"><i></i><span>Measured</span></li>
+          <li data-prov="interpolated"><i></i>Interpolated</li>
+          <li data-prov="modelled"><i></i>Modelled</li>
+        </ul>
+      </div>
+      <p class="hint" id="hint"></p>
+    </section>
+
+  </body>
+</html>

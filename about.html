@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
+    <link rel="icon" href="./assets/favicon-DHrruNeO.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon-Cs7Wkco_.png" />
+    <title>About the data · The Melting Alps</title>
+    <meta name="description" content="Sources, methods, validation and limitations behind The Melting Alps map." />
+    <!-- link previews on social media (Open Graph, X); the image is a render of the map itself -->
+    <link rel="canonical" href="https://themeltingalps.com/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Melting Alps" />
+    <meta property="og:title" content="About the data · The Melting Alps" />
+    <meta property="og:description" content="Sources, methods, validation and limitations behind The Melting Alps map." />
+    <meta property="og:url" content="https://themeltingalps.com/about.html" />
+    <meta property="og:image" content="https://themeltingalps.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="3D map of the Aletsch Glacier region with the glacier ice in 2026 shown in orange, under the title The Melting Alps." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" crossorigin href="./assets/about-qqluHdNl.css">
+  </head>
+  <body>
+    <header class="top">
+      <a class="back" href="./">← Back to the map</a>
+      <span class="brand">The Melting Alps</span>
+    </header>
+
+    <main>
+      <h1>About the data</h1>
+      <p class="lede">
+        The map shows how the 250 largest glaciers of the European Alps have shrunk since the end of the Little Ice Age
+        (about 1850) and how they are projected to shrink until 2100 under four levels of global warming. Every number
+        comes from a published dataset; this page explains which ones, what we did with them, and where the map is
+        less certain than it looks.
+      </p>
+
+      <nav class="toc" aria-label="Contents">
+        <ol>
+          <li><a href="#provenance">Measured, interpolated, modelled</a></li>
+          <li><a href="#scope">Which glaciers</a></li>
+          <li><a href="#past">Past outlines, 1850 to today</a></li>
+          <li><a href="#future">Future outlines, to 2100</a></li>
+          <li><a href="#thickness">Ice thickness on the 3D terrain</a></li>
+          <li><a href="#panel">The numbers in the glacier panel</a></li>
+          <li><a href="#quality">How good is it?</a></li>
+          <li><a href="#limits">Known limitations</a></li>
+          <li><a href="#sources">Sources and licences</a></li>
+          <li><a href="#licence">Licence and changes</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ol>
+      </nav>
+
+      <section id="provenance">
+        <h2>Measured, interpolated, modelled</h2>
+        <p>Every glacier outline on the map carries one of three labels, shown by its colour:</p>
+        <dl class="prov">
+          <div><dt><i class="sw measured"></i>Measured</dt><dd>The outline from a glacier inventory, shown in the inventory's own year.</dd></div>
+          <div><dt><i class="sw interpolated"></i>Interpolated</dt><dd>A year between two inventories. The outline is derived from the two measured outlines on either side.</dd></div>
+          <div><dt><i class="sw modelled"></i>Modelled</dt><dd>A year after the latest inventory. The outline is derived from a glacier model's projected area.</dd></div>
+        </dl>
+        <p>While the animation plays, measured and interpolated years share one colour, so that inventory years do not flash.</p>
+      </section>
+
+      <section id="scope">
+        <h2>Which glaciers</h2>
+        <p>
+          This first version maps the 250 largest glaciers, ranked by the area of their latest measured outline. Together
+          they cover 69.5 % of today's mapped glacier area in the Alps (1,681 km²), but only 44 % of the glacier
+          area of about 1850: many smaller glaciers that have melted away since are not shown. A few map entries combine two or more
+          inventory glaciers that the projections treat as one glacier (for example Grosser Aletschgletscher with a
+          small detached part); the glacier panel lists the parts. The Pyrenees are not included.
+        </p>
+      </section>
+
+      <section id="past">
+        <h2>Past outlines, 1850 to today</h2>
+        <p>The past is built from glacier inventories, country by country:</p>
+        <table>
+          <thead><tr><th scope="col">Where</th><th scope="col">Inventories used</th></tr></thead>
+          <tbody>
+            <tr><td>All glaciers</td><td>Little Ice Age maximum, compiled for the whole Alps by Reinthaler &amp; Paul (2025)</td></tr>
+            <tr><td>Switzerland</td><td>Swiss Glacier Inventories 1931, 1973, 2010, 2016 and 2023 (GLAMOS)</td></tr>
+            <tr><td>Austria</td><td>Austrian Glacier Inventories GI 1 (1969), GI 2 (1998), GI 3 (2006) and GI 5 (2021–2023)</td></tr>
+            <tr><td>France, Italy, Germany, Slovenia and border glaciers</td><td>Randolph Glacier Inventory 7.0 (imagery around 2003) and the Sentinel-2 inventory of 2015 (Paul et al. 2020)</td></tr>
+          </tbody>
+        </table>
+        <p>
+          The “1850” outline is the Little Ice Age maximum extent. It was not reached everywhere in the same year, and the
+          compilation joins outlines from several older studies; some were newly digitised by its authors.
+        </p>
+        <p>
+          Between two inventories, the ice that is lost disappears steadily over time, starting at the lowest elevations;
+          ice that is gained appears from the top down. In every inventory year the map shows exactly the measured
+          outline. Glaciers that touch a national border use the Alps-wide inventories, because national inventories stop
+          at the border.
+        </p>
+      </section>
+
+      <section id="future">
+        <h2>Future outlines, to 2100</h2>
+        <p>
+          The projections come from <a href="#src-vantricht">Van Tricht et al. (2025)</a>, who ran three glacier models
+          (PyGEM, OGGM and GloGEM) for every glacier on Earth under many climate simulations, grouped by the global
+          warming reached in 2100: +1.5, +2.0, +2.7 and +4.0 °C compared with pre-industrial times. +2.7 °C is roughly
+          where current policies lead and is the default on the map. The map uses the median over all runs; the glacier
+          panel also shows the spread.
+        </p>
+        <p>
+          The models give a glacier's area and volume per year, not its shape. To draw a future outline, the latest
+          measured outline is cut into elevation bands on a terrain model, and the lowest bands are removed until the
+          remaining area matches the projected area, relative to the area the model gives for the year of that latest
+          outline. The ice therefore retreats uphill as a level line. Because the map cannot let ice grow back, small
+          temporary increases in the projected area are smoothed out.
+        </p>
+      </section>
+
+      <section id="thickness">
+        <h2>Ice thickness on the 3D terrain</h2>
+        <p>
+          Inside the 250 glaciers, the 3D terrain shows the ice surface of the selected year, not today's surface.
+          It is built as the rock bed under the glacier plus the ice thickness of that year:
+        </p>
+        <ul>
+          <li><b>Rock bed</b>: the bedrock grid of <a href="#src-henz">Henz et al. (2025)</a>, which removes today's ice
+            thickness (Cook et al. 2023) from a satellite elevation model.</li>
+          <li><b>About 1850</b>: the ice thickness reconstructed by Henz et al. (2025) with an ice-flow model matched to the
+            mapped Little Ice Age extent. It is a model reconstruction, not a measurement.</li>
+          <li><b>Today</b>: today's surface (Mapterhorn terrain) minus the rock bed, inside the latest measured outline.</li>
+          <li><b>In between</b>: interpolated between 1850 and today, in step with the glacier's area.</li>
+          <li><b>Future</b>: today's thickness scaled down so that the glacier's volume follows the projected median volume;
+            where the outline has retreated, the bare rock bed is shown. This is a simple scaling, not a 3D model result.</li>
+        </ul>
+      </section>
+
+      <section id="panel">
+        <h2>The numbers in the glacier panel</h2>
+        <dl class="defs">
+          <div><dt>Area</dt><dd>Area of the latest measured outline, with its inventory and year.</dd></div>
+          <div><dt>Volume 2026</dt><dd>Projected median ice volume at the start of 2026 for the selected warming level (modelled), with the middle 50 % of runs.</dd></div>
+          <div><dt>Year of disappearance</dt><dd>The year in which the glacier has essentially vanished, exactly as published by Van Tricht et al. (2025), with the interquartile range. “Not projected to disappear before 2100” means the published table has no year. Where a map glacier consists of several model glaciers without a dominant one, each part's year is listed.</dd></div>
+          <div><dt>Ice thinning</dt><dd>Average loss of ice thickness over the glacier, in metres of ice per year. Observed (2000–2020): surface lowering measured from satellite elevation models (Hugonnet et al. 2021). Modelled: change in ice volume divided by the mean area over the period.</dd></div>
+          <div><dt>Charts</dt><dd>Ice volume 2000–2100 for all four warming levels, and ice area with the measured inventory areas since 1850. The model areas start from outlines of about 2003 and can differ from recent inventories.</dd></div>
+        </dl>
+      </section>
+
+      <section id="quality">
+        <h2>How good is it?</h2>
+        <p>We compared the data behind the map with independent observations:</p>
+        <ul>
+          <li><b>Little Ice Age area</b>: 4,248 km² in our data against 4,244 ± 214 km² published for the whole Alps.</li>
+          <li><b>Mass loss 2000–2020</b>: the projections give −0.78 m water equivalent per year for the Alps, close to the
+            satellite observations of Hugonnet et al. (−0.80 ± 0.20) and somewhat less than the GlaMBIE assessment (−0.88 ± 0.04).</li>
+          <li><b>Recent years are underestimated.</b> For 2020–2023 the projections give −0.97 m w.e. per year against
+            −1.70 observed (GlaMBIE): the record melt of 2022 and 2023 is not in the model runs, which follow climate
+            simulations after about 2020. In Switzerland, GLAMOS measured the second-largest loss on record in 2025/26
+            (−2.86 m w.e.) and almost 20 % volume loss since 2021; the projections contain only about two thirds of that
+            loss. The projected glaciers therefore start the future with somewhat too much ice, and the projected
+            outlines and disappearance years are, if anything, <em>on the optimistic side</em>.</li>
+          <li><b>Thinning 2000–2020</b>: modelled and observed thinning agree glacier by glacier (correlation 0.99), but this
+            is not an independent test: the models are calibrated on these observations.</li>
+          <li><b>Another model chain</b>: for French glaciers, the projections agree with ALPGM (Bolibar et al.) within the
+            scenario spread (remaining area in 2090: 19 % at +2.7 °C against 21 % for RCP4.5).</li>
+          <li><b>Shape of future outlines</b>: compared with ALPGM's modelled ice thickness for eight large French glaciers,
+            our uphill retreat overlaps well until about 2050 (overlap 0.72, against 0.84 for today's outlines) but poorly
+            by 2090 (0.47).</li>
+        </ul>
+      </section>
+
+      <section id="limits">
+        <h2>Known limitations</h2>
+        <ul>
+          <li><b>Future shapes late in the century.</b> Real valley glaciers often keep their thick ice in the main valley and
+            lose thin, high side basins first; the uphill retreat does the opposite. The worst case we found is the Glacier
+            d'Argentière. Treat outlines after about 2050 as an illustration of how much ice is left, not where.</li>
+          <li><b>Too optimistic in the near term</b>, see above: the projections miss the extreme melt years since 2022.</li>
+          <li><b>Terrain outside the 250 glaciers</b> is today's surface, including the ice of smaller glaciers.</li>
+          <li><b>Rock bed age.</b> The bedrock grid derives from an elevation model of about 2006–2011. Where a glacier has
+            thinned a lot since, today's thickness comes out too small (for example the Hallstätter Gletscher and some French
+            glaciers).</li>
+          <li><b>Little Ice Age date and outlines</b> differ by region and source; Italian coverage relies on several regional studies.</li>
+          <li><b>Names</b> follow the latest Swiss and Austrian inventories where they match, otherwise the Randolph Glacier
+            Inventory; some French names lack their accents in the source, and five glaciers have no name in any source.</li>
+          <li><b>The extinction definition</b> of Van Tricht et al. is applied by the authors; we show their published years and do not recompute them.</li>
+        </ul>
+      </section>
+
+      <section id="sources">
+        <h2>Sources and licences</h2>
+        <h3>Glacier data</h3>
+        <ol class="refs">
+          <li id="src-vantricht">Van Tricht, L., Zekollari, H., Huss, M., Rounce, D. R., Schuster, L., Aguayo, R., Schmitt, P., Maussion, F., Tober, B. &amp; Farinotti, D. (2025). Peak glacier extinction in the mid-twenty-first century. <i>Nature Climate Change</i> 16, 143–147. <a href="https://doi.org/10.1038/s41558-025-02513-9">doi:10.1038/s41558-025-02513-9</a> · data <a href="https://doi.org/10.5281/zenodo.17371642">10.5281/zenodo.17371642</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Projected area, volume and year of disappearance.</span></li>
+          <li>RGI 7.0 Consortium (2023). Randolph Glacier Inventory – A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC. <a href="https://doi.org/10.5067/f6jmovy5navz">doi:10.5067/f6jmovy5navz</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. RGI Consortium (2017). Randolph Glacier Inventory, Version 6 (NSIDC-0770). <a href="https://doi.org/10.7265/4m1f-gd79">doi:10.7265/4m1f-gd79</a>. <span>Glacier identities, names, outlines of about 2003; RGI 6.0 identifiers to link the projections.</span></li>
+          <li>Reinthaler, J. &amp; Paul, F. (2025). Reconstructed glacier area and volume changes in the European Alps since the Little Ice Age. <i>The Cryosphere</i> 19, 753–767. <a href="https://doi.org/10.5194/tc-19-753-2025">doi:10.5194/tc-19-753-2025</a> · data Reinthaler, J. (2024), <a href="https://doi.org/10.5281/zenodo.14336827">10.5281/zenodo.14336827</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Outlines of about 1850. The compilation includes outlines by Maisch et al. (2000, GLAMOS SGI 1850), Fischer et al. (2015), Gardent (2014), Knoll et al. (2009), GlaRiskAlp, Zanoner et al. (2017), Lucchesi et al. (2014), Colucci &amp; Žebre (2016), Scotti &amp; Brardinoni (2018) and new mapping by the authors.</span></li>
+          <li>Glacier Monitoring Switzerland (GLAMOS), Swiss Glacier Inventories, each <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: 1931 — Mannerfelt et al. (2022), <i>The Cryosphere</i> 16, 3249–3268 (<a href="https://doi.org/10.18750/inventory.sgi1931.r2022">data</a>); 1973 — Müller, Caflisch &amp; Müller (1976), Firn und Eis der Schweizer Alpen (<a href="https://doi.org/10.18750/inventory.sgi1973.r1976">data</a>); 2010 — Fischer et al. (2014), <i>Arctic, Antarctic, and Alpine Research</i> 46, 933–945 (<a href="https://doi.org/10.18750/inventory.sgi2010.r2010">data</a>); 2016 — Linsbauer et al. (2021), <i>Frontiers in Earth Science</i> 9, 704189 (<a href="https://doi.org/10.18750/inventory.sgi2016.r2020">data</a>); 2023 — GLAMOS (2026), Swiss Glacier Inventory 2023, release 2026 (<a href="https://doi.org/10.18750/inventory.sgi2023.r2026">data</a>). Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps ©swisstopo. <span>Swiss outlines and names.</span></li>
+          <li>Fischer, A., Seiser, B., Stocker-Waldhuber, M., Mitterer, C. &amp; Abermann, J. (2015). The Austrian Glacier Inventories GI 1 (1969), GI 2 (1998), GI 3 (2006), and GI LIA. PANGAEA, <a href="https://doi.org/10.1594/PANGAEA.844988">doi:10.1594/PANGAEA.844988</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Hartig, A., Akguen, A. M., Bertolotti, G. et al. (2026). The Austrian Glacier Inventory GI 5, 2021–2023. PANGAEA, <a href="https://doi.org/10.1594/PANGAEA.991106">doi:10.1594/PANGAEA.991106</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Austrian outlines and names.</span></li>
+          <li>Paul, F., Rastner, P., Azzoni, R. S. et al. (2020). Glacier shrinkage in the Alps continues unabated as revealed by a new glacier inventory from Sentinel-2. <i>Earth System Science Data</i> 12, 1805–1821. <a href="https://doi.org/10.5194/essd-12-1805-2020">doi:10.5194/essd-12-1805-2020</a> · data <a href="https://doi.org/10.1594/PANGAEA.909133">10.1594/PANGAEA.909133</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Outlines of 2015 outside Switzerland and Austria.</span></li>
+          <li>Hugonnet, R., McNabb, R., Berthier, E., Menounos, B., Nuth, C., Girod, L., Farinotti, D., Huss, M., Dussaillant, I., Brun, F. &amp; Kääb, A. (2021). Accelerated global glacier mass loss in the early twenty-first century. <i>Nature</i> 592, 726–731. <a href="https://doi.org/10.1038/s41586-021-03436-z">doi:10.1038/s41586-021-03436-z</a> · data (Theia) <a href="https://doi.org/10.6096/13">10.6096/13</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Observed thinning 2000–2020; validation.</span></li>
+          <li id="src-henz">Henz, A., Reinthaler, J., Nussbaumer, S., Leger, T., Kamleitner, S., Jouvet, G. &amp; Vieli, A. (2025). Alps-wide high-resolution 3D modelling reconstruction of glacier geometry and climatic conditions for the Little Ice Age. <i>The Cryosphere</i> 19, 5913–5937. <a href="https://doi.org/10.5194/tc-19-5913-2025">doi:10.5194/tc-19-5913-2025</a> · data <a href="https://doi.org/10.5281/zenodo.17037246">10.5281/zenodo.17037246</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <span>Ice thickness of about 1850 and the bedrock grid. The bedrock grid is derived from AW3D30 — Credit: AW3D30 (JAXA) — and the ice thickness of Cook, S. J. et al. (2023), <i>Geophysical Research Letters</i> 50, e2023GL105029.</span></li>
+          <li>Copernicus DEM GLO-30 (<a href="https://doi.org/10.5270/ESA-c5d3d65">doi:10.5270/ESA-c5d3d65</a>), accessed from the <a href="https://registry.opendata.aws/copernicus-dem/">Registry of Open Data on AWS</a>. Produced using Copernicus WorldDEM-30 © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30. <span>Elevation bands for the future outlines.</span></li>
+          <li>Eurostat GISCO, Countries 2024 (1:1 million). © EuroGeographics for the administrative boundaries. <span>Only used to assign each glacier to a country; no boundaries are shown.</span></li>
+          <li>Used for validation only: The GlaMBIE Team (2024). Glacier Mass Balance Intercomparison Exercise (GlaMBIE) Dataset 1.0.0. World Glacier Monitoring Service, Zurich (<a href="https://doi.org/10.5904/wgms-glambie-2024-07">doi</a>); GLAMOS (2026), annual mass balance report 2025/26 (<a href="https://doi.org/10.18752/annualrep_2026">doi</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>); Bolibar, J., Rabatel, A., Gouttevin, I., Zekollari, H. &amp; Galiez, C. (2021), Glacier evolution projections in the French Alps (2015–2100) (<a href="https://doi.org/10.5281/zenodo.5549758">doi</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</li>
+        </ol>
+        <h3>Map, terrain, fonts and software</h3>
+        <ol class="refs" start="12">
+          <li>Terrain: Mapterhorn terrain tiles, built from open elevation models: swissALTI3D (©swisstopo), BEV and the Austrian states, IGN RGE ALTI / LiDAR HD, the regions of Aosta, Bolzano, Trentino, Lombardy and Piedmont, ARSO Slovenia, Bavaria and Copernicus GLO-30. <a href="https://mapterhorn.com/attribution">Full attribution and licences</a>. <span>3D terrain and hill shading.</span></li>
+          <li>Basemap: <a href="https://openfreemap.org">OpenFreeMap</a> © <a href="https://openmaptiles.org">OpenMapTiles</a>, data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the Open Database License.</li>
+          <li>Fonts: Schibsted Grotesk, IBM Plex Sans and IBM Plex Mono, SIL Open Font License 1.1, served from this site.</li>
+          <li>Software: MapLibre GL JS and PMTiles (BSD-3-Clause) and the libraries they include. <a href="licenses/THIRD-PARTY-NOTICES.txt">Licence texts</a>.</li>
+        </ol>
+      </section>
+
+      <section id="licence">
+        <h2>Licence and changes</h2>
+        <p>
+          The glacier data on this site are adapted from the sources above: outlines were reprojected, split and merged per
+          glacier and interpolated between inventories; future outlines were derived from the projected areas on an
+          elevation model; projections were summed per glacier; thickness grids were resampled, combined and scaled.
+          The adapted data (map tiles and per-glacier files) are shared under the licences of their sources, mainly
+          <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> and, for the Austrian inventories GI 1–3, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>; please cite the original datasets. Two sources limit
+          commercial reuse: the country of each glacier comes from Eurostat GISCO boundaries (non-commercial use only), and
+          JAXA asks to be told in advance about commercial use of the AW3D30-derived bedrock. The data providers do
+          not endorse this site. Everything is provided as is, without any warranty.
+        </p>
+      </section>
+
+      <section id="privacy">
+        <h2>Privacy</h2>
+        <p>
+          This site sets no cookies and uses no analytics or tracking, so there is no cookie banner. Only if you switch
+          the map between light and dark does your browser keep that choice (in its local storage, on your device only). Your browser does contact these servers, which
+          receive your IP address: GitHub Pages, which hosts the site and logs visitors' IP addresses for security;
+          OpenFreeMap, for the basemap (by default no IP addresses in its access logs; error logs are kept 7 days); and
+          Mapterhorn, for the terrain (IP address and browser details kept up to 30 days, served through Cloudflare).
+          Fonts are served from this site itself. The site is run by Youri, a private person; for questions about
+          privacy, email <a href="mailto:themeltingalps@outlook.com">themeltingalps@outlook.com</a> (see also
+          <a href="about-me.html">About me</a>).
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

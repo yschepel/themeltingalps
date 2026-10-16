@@ -1,0 +1,116 @@
+{
+ "van_tricht_2025": {
+  "citation": "Van Tricht, L., Zekollari, H., Huss, M., Rounce, D. R., Schuster, L., Aguayo, R., Schmitt, P., Maussion, F., Tober, B. & Farinotti, D. (2025). Peak glacier extinction in the mid-twenty-first century. Nature Climate Change 16, 143-147.",
+  "doi": "10.1038/s41558-025-02513-9",
+  "data": "https://doi.org/10.5281/zenodo.17371642",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "rgi7": {
+  "citation": "RGI 7.0 Consortium (2023). Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center.",
+  "doi": "10.5067/f6jmovy5navz",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "rgi6": {
+  "citation": "RGI Consortium (2017). Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 6 (NSIDC-0770). NSIDC: National Snow and Ice Data Center.",
+  "doi": "10.7265/4m1f-gd79",
+  "licence": "cite the dataset (NSIDC)",
+  "note": "RGI 6.0 identifiers, used to link the projections"
+ },
+ "paul_2020": {
+  "citation": "Paul, F., Rastner, P., Azzoni, R. S. et al. (2020). Glacier shrinkage in the Alps continues unabated as revealed by a new glacier inventory from Sentinel-2. Earth System Science Data 12, 1805-1821. Data: Glacier inventory of the Alps from Sentinel-2, PANGAEA (2019).",
+  "doi": "10.5194/essd-12-1805-2020",
+  "data": "https://doi.org/10.1594/PANGAEA.909133",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "reinthaler_paul_2025": {
+  "citation": "Reinthaler, J. & Paul, F. (2025). Reconstructed glacier area and volume changes in the European Alps since the Little Ice Age. The Cryosphere 19, 753-767. Data: Reinthaler, J. (2024), Zenodo.",
+  "doi": "10.5194/tc-19-753-2025",
+  "data": "https://doi.org/10.5281/zenodo.14336827",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Little Ice Age outlines compiled from Maisch et al. (2000, GLAMOS SGI 1850), Fischer et al. (2015), Gardent (2014), Knoll et al. (2009), GlaRiskAlp, Zanoner et al. (2017), Lucchesi et al. (2014), Colucci & Žebre (2016), Scotti & Brardinoni (2018) and new mapping"
+ },
+ "glamos_sgi1931": {
+  "citation": "Mannerfelt, E. S., Dehecq, A., Hugonnet, R. et al. (2022). Halving of Swiss glacier volume since 1931 observed from terrestrial image photogrammetry. The Cryosphere 16, 3249-3268. Swiss Glacier Inventory 1931, GLAMOS.",
+  "data": "https://doi.org/10.18750/inventory.sgi1931.r2022",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps © swisstopo"
+ },
+ "glamos_sgi1973": {
+  "citation": "Müller, F., Caflisch, R. & Müller, G. (1976). Firn und Eis der Schweizer Alpen: Gletscherinventar. ETH Zürich. Swiss Glacier Inventory 1973, GLAMOS.",
+  "data": "https://doi.org/10.18750/inventory.sgi1973.r1976",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps © swisstopo"
+ },
+ "glamos_sgi2010": {
+  "citation": "Fischer, M., Huss, M., Barboux, C. & Hoelzle, M. (2014). The New Swiss Glacier Inventory SGI2010. Arctic, Antarctic, and Alpine Research 46(4), 933-945. Swiss Glacier Inventory 2010, GLAMOS.",
+  "data": "https://doi.org/10.18750/inventory.sgi2010.r2010",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps © swisstopo"
+ },
+ "glamos_sgi2016": {
+  "citation": "Linsbauer, A., Huss, M., Hodel, E. et al. (2021). The new Swiss Glacier Inventory SGI2016: From a topographical to a glaciological dataset. Frontiers in Earth Science 9, 704189. Swiss Glacier Inventory 2016, GLAMOS.",
+  "data": "https://doi.org/10.18750/inventory.sgi2016.r2020",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps © swisstopo"
+ },
+ "glamos_sgi2023": {
+  "citation": "GLAMOS (2026). Swiss Glacier Inventory 2023, release 2026, Glacier Monitoring Switzerland.",
+  "data": "https://doi.org/10.18750/inventory.sgi2023.r2026",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Data source: Glacier Monitoring Switzerland (GLAMOS); outlines based on maps © swisstopo"
+ },
+ "austria_gi_1_3": {
+  "citation": "Fischer, A., Seiser, B., Stocker-Waldhuber, M., Mitterer, C. & Abermann, J. (2015). The Austrian Glacier Inventories GI 1 (1969), GI 2 (1998), GI 3 (2006), and GI LIA. PANGAEA. Supplement to The Cryosphere 9, 753-766.",
+  "data": "https://doi.org/10.1594/PANGAEA.844988",
+  "licence": "CC BY 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by/3.0/"
+ },
+ "austria_gi_5": {
+  "citation": "Hartig, A., Akguen, A. M., Bertolotti, G. et al. (2026). The Austrian Glacier Inventory GI 5, 2021-2023, as vector files. PANGAEA.",
+  "data": "https://doi.org/10.1594/PANGAEA.991106",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "hugonnet_2021": {
+  "citation": "Hugonnet, R., McNabb, R., Berthier, E., Menounos, B., Nuth, C., Girod, L., Farinotti, D., Huss, M., Dussaillant, I., Brun, F. & Kääb, A. (2021). Accelerated global glacier mass loss in the early twenty-first century. Nature 592, 726-731. Dataset: Theia.",
+  "doi": "10.1038/s41586-021-03436-z",
+  "data": "https://doi.org/10.6096/13",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "henz_2025": {
+  "citation": "Henz, A., Reinthaler, J., Nussbaumer, S., Leger, T., Kamleitner, S., Jouvet, G. & Vieli, A. (2025). Alps-wide high-resolution 3D modelling reconstruction of glacier geometry and climatic conditions for the Little Ice Age. The Cryosphere 19, 5913-5937.",
+  "doi": "10.5194/tc-19-5913-2025",
+  "data": "https://doi.org/10.5281/zenodo.17037246",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "LIA ice thickness and the bedrock grid used for the 3D ice surface. The bedrock grid is derived from AW3D30 (Credit: AW3D30 (JAXA)) and the ice thickness of Cook et al. (2023), Geophysical Research Letters 50, e2023GL105029"
+ },
+ "mapterhorn": {
+  "citation": "Mapterhorn terrain tiles, built from open national elevation models.",
+  "data": "https://mapterhorn.com/attribution",
+  "licence": "per source (see link)"
+ },
+ "gisco_countries": {
+  "citation": "Eurostat GISCO, Countries 2024 (1:1 million), used to assign each glacier to a country.",
+  "data": "https://ec.europa.eu/eurostat/web/gisco",
+  "licence": "non-commercial use",
+  "note": "© EuroGeographics for the administrative boundaries"
+ },
+ "copernicus_dem": {
+  "citation": "Copernicus DEM GLO-30, used for the elevation bands of the future outlines.",
+  "doi": "10.5270/ESA-c5d3d65",
+  "data": "https://registry.opendata.aws/copernicus-dem/",
+  "licence": "Copernicus WorldDEM-30 licence (free and open)",
+  "note": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30."
+ }
+}
